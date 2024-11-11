@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fashion Week des 5 éléments : la terre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f8f6f1;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #8b7355;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .artwork-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(139, 115, 85, 0.1);
+        }
+
+        .artwork-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 6px 20px rgba(139, 115, 85, 0.15);
+        }
+
+        .audio-section {
+            background: linear-gradient(to right, #556b2f, #6b8e23);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .audio-title {
+            color: #f8f6f1;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .artwork-description {
+            margin: 30px 0;
+            font-size: 1.25em;
+            line-height: 1.8;
+            font-style: italic;
+            color: #4a5568;
+            text-align: justify;
+            padding: 0 20px;
+            border-left: 3px solid #8b7355;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .artwork-description {
+                padding: 0 15px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Fashion Week des 5 éléments : la terre</h1>
+        </header>
+
+        <main>
+            <div class="artwork-container">
+                <img src="fashion-week-terre.png" alt="La Fashion Week des 5 éléments : la terre" class="artwork-image">
+                
+                <div class="audio-section">
+                    <h3 class="audio-title">Beethoven - Symphonie n°6 'Pastorale' - IV. Allegro</h3>
+                    <audio controls>
+                        <source src="beethoven-pastoral.mp3" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                </div>
+
+                <div class="artwork-description">
+                    <p>Vêtue d'une robe aux textures d'écorce et de feuilles d'automne, cette dryade porte la majesté des forêts millénaires dans chaque pli de sa parure tellurique.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
