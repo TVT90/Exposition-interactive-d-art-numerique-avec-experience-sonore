@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fashion Week des 5 éléments : le feu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: #742a2a;
+            background-color: #fffaf0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #f6ad55;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #c05621;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .artwork-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(194, 65, 12, 0.1);
+        }
+
+        .artwork-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 6px 20px rgba(194, 65, 12, 0.15);
+        }
+
+        .audio-section {
+            background: linear-gradient(to right, #c05621, #dd6b20);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .audio-title {
+            color: #fffaf0;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .artwork-description {
+            margin: 30px 0;
+            font-size: 1.25em;
+            line-height: 1.8;
+            font-style: italic;
+            color: #742a2a;
+            text-align: justify;
+            padding: 0 20px;
+            border-left: 3px solid #f6ad55;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .artwork-description {
+                padding: 0 15px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Fashion Week des 5 éléments : le feu</h1>
+        </header>
+
+        <main>
+            <div class="artwork-container">
+                <img src="fashion-week-feu.png" alt="La Fashion Week des 5 éléments : le feu" class="artwork-image">
+                
+                <div class="audio-section">
+                    <h3 class="audio-title">Wagner - la chevauchée des Walkyries</h3>
+                    <audio controls>
+                        <source src="Wagner - walkyries.mp3" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                </div>
+
+                <div class="artwork-description">
+                    <p>Dans un tourbillon de flammes et d'or, cette déesse du feu se dresse, majestueuse, sa robe écarlate dansant comme des langues de feu vivantes, embrasant l'air autour d'elle d'une passion incandescente.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
