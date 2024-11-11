@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fashion Week des 5 éléments : l'éther</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: #553c9a;
+            background-color: #faf5ff;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #9f7aea;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #44337a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .artwork-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(102, 51, 153, 0.1);
+        }
+
+        .artwork-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 6px 20px rgba(102, 51, 153, 0.15);
+        }
+
+        .audio-section {
+            background: linear-gradient(to right, #553c9a, #6b46c1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .audio-title {
+            color: #faf5ff;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .artwork-description {
+            margin: 30px 0;
+            font-size: 1.25em;
+            line-height: 1.8;
+            font-style: italic;
+            color: #553c9a;
+            text-align: justify;
+            padding: 0 20px;
+            border-left: 3px solid #9f7aea;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .artwork-description {
+                padding: 0 15px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Fashion Week des 5 éléments : l'éther</h1>
+        </header>
+
+        <main>
+            <div class="artwork-container">
+                <img src="fashion-week-ether.png" alt="La Fashion Week des 5 éléments : l'éther" class="artwork-image">
+                
+                <div class="audio-section">
+                    <h3 class="audio-title">Saint-Saëns - Le Carnaval des animaux : L'Aquarium</h3>
+                    <audio controls>
+                        <source src="saint-saens-aquarium.mp3" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                </div>
+
+                <div class="artwork-description">
+                    <p>Dans un tourbillon de brume violette étoilée, une déesse cosmique s'abandonne au flux de l'univers, ses cheveux d'encre parsemés de constellations dansant dans l'infini mystique.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
