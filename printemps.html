@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fashion Week des 4 saisons : le printemps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: #2f4f4f;
+            background-color: #f0fff0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #98fb98;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #2e8b57;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .artwork-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(144, 238, 144, 0.2);
+        }
+
+        .artwork-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 6px 20px rgba(144, 238, 144, 0.15);
+        }
+
+        .audio-section {
+            background: linear-gradient(to right, #90ee90, #98fb98);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .audio-title {
+            color: #2f4f4f;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .artwork-description {
+            margin: 30px 0;
+            font-size: 1.25em;
+            line-height: 1.8;
+            font-style: italic;
+            color: #2f4f4f;
+            text-align: justify;
+            padding: 0 20px;
+            border-left: 3px solid #98fb98;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .artwork-description {
+                padding: 0 15px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Fashion Week des 4 saisons : le printemps</h1>
+        </header>
+
+        <main>
+            <div class="artwork-container">
+                <img src="fashion-week-printemps.png" alt="La Fashion Week des 4 saisons : le printemps" class="artwork-image">
+                
+                <div class="audio-section">
+                    <h3 class="audio-title">Claude Debussy - Rêverie</h3>
+                    <audio controls>
+                        <source src="debussy-reverie.mp3" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                </div>
+
+                <div class="artwork-description">
+                    <p>Dans un souffle de jade, les pétales s'éveillent. Dansant sur sa robe comme autant de promesses, le printemps se fait femme et la nature s'émerveille.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
