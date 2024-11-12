@@ -1,1 +1,147 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>La Fashion Week des minéraux : Miss Citrine</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body {
+           font-family: 'Cormorant Garamond', serif;
+           line-height: 1.6;
+           color: #8B4513;
+           background-color: #FDFAF1;
+           max-width: 100%;
+           overflow-x: hidden;
+           background-image: linear-gradient(120deg, #FDFAF1, #FFF3D4);
+       }
+       .container {
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       header {
+           text-align: center;
+           padding: 40px 0;
+           border-bottom: 2px solid #DAA520;
+       }
+       h1 {
+           font-family: 'Playfair Display', serif;
+           font-size: 2.8em;
+           margin-bottom: 20px;
+           color: #8B4513;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           text-shadow: 1px 1px 2px rgba(218, 165, 32, 0.3);
+       }
+       .artwork-container {
+           background: rgba(255, 255, 255, 0.95);
+           border-radius: 12px;
+           padding: 30px;
+           margin: 40px 0;
+           box-shadow: 0 4px 15px rgba(218, 165, 32, 0.2);
+           position: relative;
+           overflow: hidden;
+       }
+       .artwork-image {
+           width: 100%;
+           max-width: 800px;
+           height: auto;
+           border-radius: 8px;
+           margin: 0 auto 30px;
+           display: block;
+           box-shadow: 0 6px 20px rgba(139, 69, 19, 0.15);
+       }
+       .audio-section {
+           background: linear-gradient(to right, #8B4513, #DAA520);
+           padding: 20px;
+           border-radius: 8px;
+           margin: 30px 0;
+           text-align: center;
+       }
+       .audio-title {
+           color: #FFFFFF;
+           font-family: 'Playfair Display', serif;
+           font-style: italic;
+           margin-bottom: 15px;
+       }
+       audio {
+           width: 100%;
+           max-width: 500px;
+           margin: 10px 0;
+       }
+       .artwork-description {
+           margin: 30px 0;
+           font-size: 1.25em;
+           line-height: 1.8;
+           font-style: italic;
+           color: #8B4513;
+           text-align: justify;
+           padding: 0 20px;
+           border-left: 3px solid #DAA520;
+       }
+       @media (max-width: 768px) {
+           .container {
+               padding: 10px;
+           }
+           h1 {
+               font-size: 2em;
+           }
+           .artwork-description {
+               padding: 0 15px;
+               font-size: 1.1em;
+           }
+       }
+       
+       /* Effet de scintillement doré */
+       @keyframes sparkle {
+           0%, 100% { opacity: 0; transform: scale(1); }
+           50% { opacity: 1; transform: scale(1.2); }
+       }
+       
+       .artwork-container::before {
+           content: '';
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           top: 0;
+           left: 0;
+           background: linear-gradient(45deg, 
+               transparent 45%, 
+               rgba(218, 165, 32, 0.1) 50%,
+               transparent 55%
+           );
+           animation: sparkle 4s infinite;
+           pointer-events: none;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>La Fashion Week des minéraux : Miss Citrine</h1>
+       </header>
+       <main>
+           <div class="artwork-container">
+               <img src="fashion-week-mineraux-citrine.png" alt="La Fashion Week des minéraux : Miss Citrine" class="artwork-image">
+               
+               <div class="audio-section">
+                   <h3 class="audio-title">Violin Sonata no. 21, K. 304 - I Allegro</h3>
+                   <audio controls>
+                       <source src="mozart-sonata21.mp3" type="audio/mpeg">
+                       Votre navigateur ne supporte pas l'élément audio.
+                   </audio>
+               </div>
+               <div class="artwork-description">
+                   <p>Couronnée d'éclats d'or et de cristaux solaires, sa silhouette capture la lumière des astres dans une danse de gemmes incandescentes.</p>
+               </div>
+           </div>
+       </main>
+   </div>
+</body>
+</html>
