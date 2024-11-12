@@ -10,3 +10,4 @@ Cette exposition propose une expérience immersive mêlant art visuel et sonore.
 - HTML/CSS pour la présentation
 - Audio libre de droits
 - QR codes pour l'accès aux contenus
+Mise à jour : novembre 2024
