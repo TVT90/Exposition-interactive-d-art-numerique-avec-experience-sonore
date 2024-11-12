@@ -1,1 +1,142 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>La Fashion Week des minéraux : Miss Turquoise et Corail</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body {
+           font-family: 'Cormorant Garamond', serif;
+           line-height: 1.6;
+           color: #1B4B4B;
+           background-color: #E6F3F3;
+           max-width: 100%;
+           overflow-x: hidden;
+           background-image: linear-gradient(120deg, #E6F3F3, #FFE6E6);
+       }
+       .container {
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       header {
+           text-align: center;
+           padding: 40px 0;
+           border-bottom: 2px solid #FF6B6B;
+       }
+       h1 {
+           font-family: 'Playfair Display', serif;
+           font-size: 2.8em;
+           margin-bottom: 20px;
+           color: #1B4B4B;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+       }
+       .artwork-container {
+           background: rgba(255, 255, 255, 0.9);
+           border-radius: 12px;
+           padding: 30px;
+           margin: 40px 0;
+           box-shadow: 0 4px 15px rgba(27, 75, 75, 0.2);
+       }
+       .artwork-image {
+           width: 100%;
+           max-width: 800px;
+           height: auto;
+           border-radius: 8px;
+           margin: 0 auto 30px;
+           display: block;
+           box-shadow: 0 6px 20px rgba(27, 75, 75, 0.15);
+       }
+       .audio-section {
+           background: linear-gradient(to right, #1B4B4B, #40E0D0);
+           padding: 20px;
+           border-radius: 8px;
+           margin: 30px 0;
+           text-align: center;
+       }
+       .audio-title {
+           color: #FFFFFF;
+           font-family: 'Playfair Display', serif;
+           font-style: italic;
+           margin-bottom: 15px;
+       }
+       audio {
+           width: 100%;
+           max-width: 500px;
+           margin: 10px 0;
+       }
+       .artwork-description {
+           margin: 30px 0;
+           font-size: 1.25em;
+           line-height: 1.8;
+           font-style: italic;
+           color: #1B4B4B;
+           text-align: justify;
+           padding: 0 20px;
+           border-left: 3px solid #FF6B6B;
+       }
+       @media (max-width: 768px) {
+           .container {
+               padding: 10px;
+           }
+           h1 {
+               font-size: 2em;
+           }
+           .artwork-description {
+               padding: 0 15px;
+               font-size: 1.1em;
+           }
+       }
+       
+       /* Animation d'ondulation pour évoquer l'océan */
+       @keyframes wave {
+           0% { transform: translateX(0) translateY(0); }
+           50% { transform: translateX(5px) translateY(-5px); }
+           100% { transform: translateX(0) translateY(0); }
+       }
+       .artwork-container::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           height: 3px;
+           background: linear-gradient(90deg, #40E0D0, #FF6B6B);
+           animation: wave 3s ease-in-out infinite;
+           border-radius: 3px;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>La Fashion Week des minéraux : Miss Turquoise et Corail</h1>
+       </header>
+       <main>
+           <div class="artwork-container">
+               <img src="fashion-week-mineraux-turquoise.png" alt="La Fashion Week des minéraux : Miss Turquoise et Corail" class="artwork-image">
+               
+               <div class="audio-section">
+                   <h3 class="audio-title">Beethoven - String Quartet No.7 in F major Op.59 - III.Adagio molto e mesto</h3>
+                   <audio controls>
+                       <source src="beethoven-quartet7.flac" type="audio/flac">
+                       <source src="beethoven-quartet7.mp3" type="audio/mpeg">
+                       Votre navigateur ne supporte pas l'élément audio.
+                   </audio>
+               </div>
+               <div class="artwork-description">
+                   <p>Dans l'écrin turquoise des profondeurs marines, les branches de corail tissent sa parure comme si l'océan avait créé sa reine.</p>
+               </div>
+           </div>
+       </main>
+   </div>
+</body>
+</html>
