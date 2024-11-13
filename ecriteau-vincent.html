@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Écriteau - Vincent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            background: white;
+            font-family: 'Cormorant Garamond', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ecriteau {
+            width: 190mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20mm 15mm;
+            height: 277mm;
+            justify-content: space-between;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .collection-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16pt;
+            color: #666;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8mm;
+        }
+        .artwork-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1A1A1A;
+        }
+        .separator {
+            width: 60mm;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #2C3E50, transparent);
+            margin: 8mm 0;
+        }
+        .poetic-text {
+            font-size: 14pt;
+            line-height: 1.6;
+            text-align: justify;
+            font-style: italic;
+            color: #333;
+            max-width: 160mm;
+            margin-bottom: 15mm;
+        }
+        .qr-container {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .qr-code {
+            width: 80mm;
+            height: 80mm;
+            margin-bottom: 5mm;
+        }
+        .music-info {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            font-style: italic;
+            color: #666;
+            line-height: 1.4;
+        }
+        .music-subtitle {
+            font-size: 10pt;
+            color: #888;
+            margin-top: 2mm;
+        }
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            color: #999;
+            letter-spacing: 2px;
+            margin-top: 10mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="ecriteau">
+        <div class="header">
+            <div class="collection-title">La Collection Papier mâché</div>
+            <div class="artwork-title">Vincent</div>
+            <div class="separator"></div>
+        </div>
+        
+        <div class="poetic-text">
+            Van Gogh, l'âme écorchée, sculpté en fragments de matière brute, chaque morceau témoignant de la violence et de la beauté de son regard sur le monde. Sa chevelure, flamme figée, se fond dans un tourbillon de couleurs arrachées à la toile, comme un écho de sa Nuit Étoilée. Ici, chaque éclat de papier, chaque coup de texture révèle un rêve inachevé, une œuvre née de la douleur et de l'extase.
+        </div>
 
+        <div class="qr-container">
+            <img src="qr-code-vincent.png" alt="QR Code musical" class="qr-code">
+            <div class="music-info">
+                Nocturne Op.9 No.2
+                <div class="music-subtitle">Experience sonore interactive</div>
+            </div>
+        </div>
+
+        <div class="signature">Nova and I</div>
+    </div>
+</body>
+</html>
