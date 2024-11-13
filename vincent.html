@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>La collection Papier mâché : Vincent</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body {
+           font-family: 'Cormorant Garamond', serif;
+           line-height: 1.6;
+           color: #2C3E50;
+           background-color: #ECF0F1;
+           max-width: 100%;
+           overflow-x: hidden;
+           background-image: linear-gradient(120deg, #ECF0F1, #D6EAF8);
+       }
+       .container {
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       header {
+           text-align: center;
+           padding: 40px 0;
+           border-bottom: 2px solid #34495E;
+       }
+       h1 {
+           font-family: 'Playfair Display', serif;
+           font-size: 2.8em;
+           margin-bottom: 20px;
+           color: #2C3E50;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           text-shadow: 1px 1px 2px rgba(52, 73, 94, 0.3);
+       }
+       .artwork-container {
+           background: rgba(255, 255, 255, 0.95);
+           border-radius: 12px;
+           padding: 30px;
+           margin: 40px 0;
+           box-shadow: 0 4px 15px rgba(52, 73, 94, 0.2);
+           position: relative;
+           overflow: hidden;
+       }
+       .artwork-image {
+           width: 100%;
+           max-width: 800px;
+           height: auto;
+           border-radius: 8px;
+           margin: 0 auto 30px;
+           display: block;
+           box-shadow: 0 6px 20px rgba(52, 73, 94, 0.15);
+       }
+       .audio-section {
+           background: linear-gradient(to right, #2C3E50, #34495E);
+           padding: 20px;
+           border-radius: 8px;
+           margin: 30px 0;
+           text-align: center;
+       }
+       .audio-title {
+           color: #ECF0F1;
+           font-family: 'Playfair Display', serif;
+           font-style: italic;
+           margin-bottom: 15px;
+       }
+       audio {
+           width: 100%;
+           max-width: 500px;
+           margin: 10px 0;
+       }
+       .artwork-description {
+           margin: 30px 0;
+           font-size: 1.25em;
+           line-height: 1.8;
+           font-style: italic;
+           color: #2C3E50;
+           text-align: justify;
+           padding: 0 20px;
+           border-left: 3px solid #34495E;
+       }
+       @media (max-width: 768px) {
+           .container {
+               padding: 10px;
+           }
+           h1 {
+               font-size: 2em;
+           }
+           .artwork-description {
+               padding: 0 15px;
+               font-size: 1.1em;
+           }
+       }
+       
+       /* Effet de tourbillon de papier */
+       @keyframes swirl {
+           0% { transform: rotate(0deg) scale(1); opacity: 0; }
+           50% { opacity: 0.3; }
+           100% { transform: rotate(360deg) scale(0); opacity: 0; }
+       }
+       
+       .paper-piece {
+           position: absolute;
+           width: 8px;
+           height: 8px;
+           background: rgba(52, 73, 94, 0.1);
+           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+           pointer-events: none;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>La collection Papier mâché : Vincent</h1>
+       </header>
+       <main>
+           <div class="artwork-container">
+               <img src="papier-mache-vincent.png" alt="Vincent Van Gogh" class="artwork-image">
+               
+               <div class="audio-section">
+                   <h3 class="audio-title">Chopin - Nocturne Op.9 No.2</h3>
+                   <audio controls>
+                       <source src="chopin-nocturne.mp3" type="audio/mpeg">
+                       Votre navigateur ne supporte pas l'élément audio.
+                   </audio>
+               </div>
+               <div class="artwork-description">
+                   <p>Van Gogh, l'âme écorchée, sculpté en fragments de matière brute, chaque morceau témoignant de la violence et de la beauté de son regard sur le monde. Sa chevelure, flamme figée, se fond dans un tourbillon de couleurs arrachées à la toile, comme un écho de sa Nuit Étoilée. Ici, chaque éclat de papier, chaque coup de texture révèle un rêve inachevé, une œuvre née de la douleur et de l'extase.</p>
+               </div>
+           </div>
+       </main>
+   </div>
 
+   <script>
+       // Animation des morceaux de papier tourbillonnants
+       function createPaperPiece() {
+           const piece = document.createElement('div');
+           piece.classList.add('paper-piece');
+           piece.style.left = Math.random() * window.innerWidth + 'px';
+           piece.style.top = Math.random() * window.innerHeight + 'px';
+           piece.style.animation = `swirl ${Math.random() * 4 + 3}s linear infinite`;
+           document.body.appendChild(piece);
+
+           setTimeout(() => {
+               piece.remove();
+           }, 7000);
+       }
+
+       setInterval(createPaperPiece, 300);
+   </script>
+</body>
+</html>
