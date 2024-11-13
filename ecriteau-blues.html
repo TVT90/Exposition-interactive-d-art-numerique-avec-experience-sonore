@@ -1,135 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Écriteau - La naissance du blues</title>
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
-   <style>
-       @page {
-           size: A4;
-           margin: 0;
-       }
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-       }
-       body {
-           width: 210mm;
-           min-height: 297mm;
-           margin: 0;
-           padding: 20mm;
-           background: #FAFAFA;
-           font-family: 'Cormorant Garamond', serif;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-       .ecriteau {
-           width: 170mm;
-           margin: 0 auto;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           background: white;
-           padding: 30px;
-           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-           border-radius: 2mm;
-       }
-       .collection-title {
-           font-family: 'Playfair Display', serif;
-           font-size: 16pt;
-           color: #666;
-           margin-bottom: 5mm;
-           letter-spacing: 2px;
-           text-transform: uppercase;
-       }
-       .artwork-title {
-           font-family: 'Playfair Display', serif;
-           font-size: 24pt;
-           font-weight: 700;
-           text-align: center;
-           margin-bottom: 10mm;
-           color: #1A1A1A;
-       }
-       .separator {
-           width: 60mm;
-           height: 1px;
-           background: linear-gradient(to right, transparent, #8B4513, transparent);
-           margin: 8mm auto;
-           display: block;
-           position: relative;
-           left: 50%;
-           transform: translateX(-50%);
-       }
-       .poetic-text {
-           font-size: 14pt;
-           line-height: 1.8;
-           text-align: justify;
-           margin-bottom: 15mm;
-           font-style: italic;
-           color: #333;
-           max-width: 140mm;
-       }
-       .qr-container {
-           margin: 10mm 0;
-           text-align: center;
-       }
-       .qr-code {
-           width: 80mm;
-           height: 80mm;
-           margin: 0 auto;
-           border-radius: 2mm;
-       }
-       .music-info {
-           font-family: 'Playfair Display', serif;
-           font-size: 12pt;
-           font-style: italic;
-           color: #666;
-           margin-top: 5mm;
-           text-align: center;
-           line-height: 1.4;
-       }
-       .music-subtitle {
-           font-size: 10pt;
-           color: #888;
-           margin-top: 2mm;
-       }
-       .signature {
-           font-family: 'Playfair Display', serif;
-           font-size: 12pt;
-           color: #999;
-           margin-top: 10mm;
-           letter-spacing: 2px;
-       }
-       
-       @media print {
-           body {
-               background: white;
-           }
-           .ecriteau {
-               box-shadow: none;
-           }
-       }
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Écriteau - La naissance du blues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            background: white;
+            font-family: 'Cormorant Garamond', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ecriteau {
+            width: 190mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20mm 15mm;
+            height: 277mm;
+            justify-content: space-between;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .collection-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16pt;
+            color: #666;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8mm;
+        }
+        .artwork-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1A1A1A;
+        }
+        .separator {
+            width: 50mm;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #1A1A1A, transparent);
+            margin: 5mm auto;
+        }
+        .poetic-text {
+            font-size: 14pt;
+            line-height: 1.6;
+            text-align: justify;
+            font-style: italic;
+            color: #333;
+            max-width: 140mm;
+            margin-bottom: 15mm;
+        }
+        .qr-container {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .qr-code {
+            width: 80mm;
+            height: 80mm;
+            margin-bottom: 5mm;
+        }
+        .music-info {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            font-style: italic;
+            color: #666;
+            line-height: 1.4;
+        }
+        .music-subtitle {
+            font-size: 10pt;
+            color: #888;
+            margin-top: 2mm;
+        }
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            color: #999;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
-   <div class="ecriteau">
-       <div class="collection-title">La Collection Papier mâché</div>
-       <div class="artwork-title">La naissance du blues</div>
-       <div class="separator"></div>
-       <div class="poetic-text">
-           Dans un champ de coton baigné d'or crépusculaire, un bluesman sculpté dans la terre et les souvenirs fait chanter sa guitare, chaque ride de son visage racontant l'histoire d'un peuple, tandis que ses mains rugueuses, comme le papier qui lui donne vie, égrènent les notes d'une mélodie aussi profonde que les racines du Delta.
-       </div>
-       <div class="qr-container">
-           <img src="qr-code-blues.png" alt="QR Code musical" class="qr-code">
-           <div class="music-info">
-               Follow the Little Creek
-               <div class="music-subtitle">Experience sonore interactive</div>
-           </div>
-       </div>
-       <div class="signature">Nova and I</div>
-   </div>
+    <div class="ecriteau">
+        <div class="header">
+            <div class="collection-title">La Collection Papier mâché</div>
+            <div class="artwork-title">La naissance du blues</div>
+            <div class="separator"></div>
+        </div>
+        
+        <div class="poetic-text">
+            Dans un champ de coton baigné d'or crépusculaire, un bluesman sculpté dans la terre et les souvenirs fait chanter sa guitare, chaque ride de son visage racontant l'histoire d'un peuple, tandis que ses mains rugueuses, comme le papier qui lui donne vie, égrènent les notes d'une mélodie aussi profonde que les racines du Delta.
+        </div>
+
+        <div class="qr-container">
+            <img src="qr-code-blues.png" alt="QR Code musical" class="qr-code">
+            <div class="music-info">
+                Follow the Little Creek
+                <div class="music-subtitle">Experience sonore interactive</div>
+            </div>
+        </div>
+
+        <div class="signature">Nova and I</div>
+    </div>
 </body>
 </html>
