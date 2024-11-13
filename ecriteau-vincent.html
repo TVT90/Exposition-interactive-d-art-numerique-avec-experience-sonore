@@ -51,13 +51,16 @@
             font-size: 28pt;
             font-weight: 700;
             color: #1A1A1A;
-        }
-        .separator {
-            width: 60mm;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #2C3E50, transparent);
-            margin: 8mm 0;
-        }
+.separator {
+    width: 60mm;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #2C3E50, transparent);
+    margin: 8mm auto; /* Ajout de 'auto' pour le centrage horizontal */
+    display: block; /* Assure que l'élément se comporte comme un bloc */
+    position: relative; /* Pour un meilleur contrôle du positionnement */
+    left: 50%; /* Position à partir de la gauche */
+    transform: translateX(-50%); /* Décalage de sa propre largeur pour centrer */
+}
         .poetic-text {
             font-size: 14pt;
             line-height: 1.6;
