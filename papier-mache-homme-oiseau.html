@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>La collection Papier mâché : L'homme et l'oiseau</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body {
+           font-family: 'Cormorant Garamond', serif;
+           line-height: 1.6;
+           color: #4A4A4A;
+           background-color: #F5F5F0;
+           max-width: 100%;
+           overflow-x: hidden;
+           background-image: linear-gradient(120deg, #F5F5F0, #E8E6D9);
+       }
+       .container {
+           max-width: 900px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       header {
+           text-align: center;
+           padding: 40px 0;
+           border-bottom: 2px solid #9B8E83;
+       }
+       h1 {
+           font-family: 'Playfair Display', serif;
+           font-size: 2.8em;
+           margin-bottom: 20px;
+           color: #4A4A4A;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           text-shadow: 1px 1px 2px rgba(155, 142, 131, 0.3);
+       }
+       .artwork-container {
+           background: rgba(255, 255, 255, 0.95);
+           border-radius: 12px;
+           padding: 30px;
+           margin: 40px 0;
+           box-shadow: 0 4px 15px rgba(155, 142, 131, 0.2);
+           position: relative;
+           overflow: hidden;
+       }
+       .artwork-image {
+           width: 100%;
+           max-width: 800px;
+           height: auto;
+           border-radius: 8px;
+           margin: 0 auto 30px;
+           display: block;
+           box-shadow: 0 6px 20px rgba(155, 142, 131, 0.15);
+           filter: sepia(10%);
+       }
+       .audio-section {
+           background: linear-gradient(to right, #9B8E83, #BCB6A6);
+           padding: 20px;
+           border-radius: 8px;
+           margin: 30px 0;
+           text-align: center;
+       }
+       .audio-title {
+           color: #F5F5F0;
+           font-family: 'Playfair Display', serif;
+           font-style: italic;
+           margin-bottom: 15px;
+       }
+       audio {
+           width: 100%;
+           max-width: 500px;
+           margin: 10px 0;
+       }
+       .artwork-description {
+           margin: 30px 0;
+           font-size: 1.25em;
+           line-height: 1.8;
+           font-style: italic;
+           color: #4A4A4A;
+           text-align: justify;
+           padding: 0 20px;
+           border-left: 3px solid #9B8E83;
+       }
+       @media (max-width: 768px) {
+           .container {
+               padding: 10px;
+           }
+           h1 {
+               font-size: 2em;
+           }
+           .artwork-description {
+               padding: 0 15px;
+               font-size: 1.1em;
+           }
+       }
+       
+       /* Effet de feuille qui tombe */
+       @keyframes fallingleaf {
+           0% {
+               transform: translateY(-20px) rotate(0deg);
+               opacity: 0;
+           }
+           50% {
+               opacity: 1;
+           }
+           100% {
+               transform: translateY(100vh) rotate(360deg);
+               opacity: 0;
+           }
+       }
+       
+       .leaf {
+           position: fixed;
+           width: 15px;
+           height: 15px;
+           background: rgba(155, 142, 131, 0.2);
+           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+           pointer-events: none;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>La collection Papier mâché : L'homme et l'oiseau</h1>
+       </header>
+       <main>
+           <div class="artwork-container">
+               <img src="papier-mache-homme-oiseau.png" alt="L'homme et l'oiseau" class="artwork-image">
+               
+               <div class="audio-section">
+                   <h3 class="audio-title">Erik Satie - Gymnopédie no. 1</h3>
+                   <audio controls>
+                       <source src="satie-gymnopedie1.mp3" type="audio/mpeg">
+                       Votre navigateur ne supporte pas l'élément audio.
+                   </audio>
+               </div>
+               <div class="artwork-description">
+                   <p>Dans la mélancolie automnale, un dialogue silencieux se tisse entre deux solitudes de papier froissé. L'homme aux rides profondes comme des origamis anciens partage son pain avec un merle philosophe, tandis que les feuilles dorées tissent autour d'eux un cocon de complicité muette.</p>
+               </div>
+           </div>
+       </main>
+   </div>
 
+   <script>
+       // Animation des feuilles qui tombent
+       function createLeaf() {
+           const leaf = document.createElement('div');
+           leaf.classList.add('leaf');
+           leaf.style.left = Math.random() * window.innerWidth + 'px';
+           leaf.style.animationDuration = Math.random() * 5 + 10 + 's';
+           document.body.appendChild(leaf);
+
+           setTimeout(() => {
+               leaf.remove();
+           }, 15000);
+       }
+
+       setInterval(createLeaf, 3000);
+   </script>
+</body>
+</html>
