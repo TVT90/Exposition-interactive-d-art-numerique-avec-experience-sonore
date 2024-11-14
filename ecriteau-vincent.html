@@ -51,14 +51,7 @@
            font-size: 28pt;
            font-weight: 700;
            color: #1A1A1A;
-       }
-       .separator {
-           width: 60mm;
-           height: 0;
-           border-top: 1px solid #1A1A1A;
-           margin: 8mm auto;
-           display: block;
-           position: relative;
+           margin-bottom: 8mm;
        }
        .poetic-text {
            font-size: 14pt;
@@ -68,6 +61,7 @@
            color: #333;
            max-width: 140mm;
            margin-bottom: 15mm;
+           margin-top: 15mm;
        }
        .qr-container {
            text-align: center;
@@ -96,14 +90,18 @@
            color: #999;
            letter-spacing: 2px;
        }
+       .separator-line {
+           width: 100%;
+           text-align: center;
+           margin: 8mm 0;
+       }
        @media print {
            body {
                background: white;
            }
-           .separator {
-               border-top: 1px solid #1A1A1A !important;
-               print-color-adjust: exact;
-               -webkit-print-color-adjust: exact;
+           svg {
+               display: block !important;
+               visibility: visible !important;
            }
        }
    </style>
@@ -113,7 +111,11 @@
        <div class="header">
            <div class="collection-title">La Collection Papier mâché</div>
            <div class="artwork-title">Vincent</div>
-           <div class="separator"></div>
+           <div class="separator-line">
+               <svg width="60mm" height="1mm" viewBox="0 0 60 1">
+                   <line x1="0" y1="0.5" x2="60" y2="0.5" stroke="#1A1A1A" stroke-width="1"/>
+               </svg>
+           </div>
        </div>
        
        <div class="poetic-text">
