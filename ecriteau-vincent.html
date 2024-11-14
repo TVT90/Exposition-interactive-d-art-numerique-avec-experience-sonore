@@ -17,74 +17,72 @@
        }
        body {
            width: 210mm;
-           min-height: 297mm;
+           height: 297mm;
            margin: 0;
-           padding: 20mm;
-           background: #FAFAFA;
+           background: white;
            font-family: 'Cormorant Garamond', serif;
            display: flex;
            justify-content: center;
            align-items: center;
        }
        .ecriteau {
-           width: 170mm;
-           margin: 0 auto;
+           width: 190mm;
            display: flex;
            flex-direction: column;
            align-items: center;
-           background: white;
-           padding: 30px;
-           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-           border-radius: 2mm;
+           padding: 20mm 15mm;
+           height: 277mm;
+           justify-content: space-between;
+       }
+       .header {
+           text-align: center;
+           margin-bottom: 10mm;
        }
        .collection-title {
            font-family: 'Playfair Display', serif;
            font-size: 16pt;
            color: #666;
-           margin-bottom: 5mm;
            letter-spacing: 2px;
            text-transform: uppercase;
+           margin-bottom: 8mm;
        }
        .artwork-title {
            font-family: 'Playfair Display', serif;
-           font-size: 24pt;
+           font-size: 28pt;
            font-weight: 700;
-           text-align: center;
-           margin-bottom: 10mm;
            color: #1A1A1A;
        }
        .separator {
-           width: 50mm;
-           height: 1px;
-           background: linear-gradient(to right, transparent, #1A1A1A, transparent);
-           margin: 5mm 0 10mm 0;
+           width: 60mm;
+           height: 0;
+           border-top: 1px solid #1A1A1A;
+           margin: 8mm auto;
+           display: block;
+           position: relative;
        }
        .poetic-text {
            font-size: 14pt;
-           line-height: 1.8;
+           line-height: 1.6;
            text-align: justify;
-           margin-bottom: 15mm;
            font-style: italic;
            color: #333;
            max-width: 140mm;
+           margin-bottom: 15mm;
        }
        .qr-container {
-           margin: 10mm 0;
            text-align: center;
+           margin-bottom: 10mm;
        }
        .qr-code {
            width: 80mm;
            height: 80mm;
-           margin: 0 auto;
-           border-radius: 2mm;
+           margin-bottom: 5mm;
        }
        .music-info {
            font-family: 'Playfair Display', serif;
            font-size: 12pt;
            font-style: italic;
            color: #666;
-           margin-top: 5mm;
-           text-align: center;
            line-height: 1.4;
        }
        .music-subtitle {
@@ -96,28 +94,32 @@
            font-family: 'Playfair Display', serif;
            font-size: 12pt;
            color: #999;
-           margin-top: 10mm;
            letter-spacing: 2px;
        }
-       
        @media print {
            body {
                background: white;
            }
-           .ecriteau {
-               box-shadow: none;
+           .separator {
+               border-top: 1px solid #1A1A1A !important;
+               print-color-adjust: exact;
+               -webkit-print-color-adjust: exact;
            }
        }
    </style>
 </head>
 <body>
    <div class="ecriteau">
-       <div class="collection-title">La Collection Papier mâché</div>
-       <div class="artwork-title">Vincent</div>
-       <div class="separator"></div>
+       <div class="header">
+           <div class="collection-title">La Collection Papier mâché</div>
+           <div class="artwork-title">Vincent</div>
+           <div class="separator"></div>
+       </div>
+       
        <div class="poetic-text">
            Van Gogh, l'âme écorchée, sculpté en fragments de matière brute, chaque morceau témoignant de la violence et de la beauté de son regard sur le monde. Sa chevelure, flamme figée, se fond dans un tourbillon de couleurs arrachées à la toile, comme un écho de sa Nuit Étoilée. Ici, chaque éclat de papier, chaque coup de texture révèle un rêve inachevé, une œuvre née de la douleur et de l'extase.
        </div>
+
        <div class="qr-container">
            <img src="qr-code-vincent.png" alt="QR Code musical" class="qr-code">
            <div class="music-info">
@@ -125,6 +127,7 @@
                <div class="music-subtitle">Experience sonore interactive</div>
            </div>
        </div>
+
        <div class="signature">Nova and I</div>
    </div>
 </body>
