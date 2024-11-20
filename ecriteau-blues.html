@@ -36,9 +36,11 @@
        }
        .header {
            text-align: center;
-           margin-bottom: 10mm;
            width: 100%;
-           position: relative;
+           margin: 0 auto 10mm auto;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
        }
        .collection-title {
            font-family: 'Playfair Display', serif;
@@ -47,22 +49,22 @@
            letter-spacing: 2px;
            text-transform: uppercase;
            margin-bottom: 8mm;
+           width: 100%;
        }
        .artwork-title {
            font-family: 'Playfair Display', serif;
            font-size: 28pt;
            font-weight: 700;
            color: #1A1A1A;
-           margin-bottom: 8mm;
+           margin: 8mm 0;
+           width: 100%;
        }
        .separator {
            width: 50mm;
            height: 1px;
            background: linear-gradient(to right, transparent, #1A1A1A, transparent);
            margin: 8mm auto;
-           position: relative;
-           left: 50%;
-           transform: translateX(-50%);
+           display: block;
        }
        .poetic-text {
            font-size: 14pt;
