@@ -178,14 +178,39 @@ footer {
 
     .wifi-info, .audio-info {
         break-inside: avoid;
-        border: 1px solid #ccc;
+        border: 2px solid #2196F3;
+        background-color: #e8f4f8 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .audio-info {
+        border-color: #F3A521;
+        background-color: #f8f4e8 !important;
+    }
+
+    code {
+        border: 1px solid #000;
+        background: #fff !important;
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        padding: 0.5em 1em;
+    }
+
+    h1, h2, h3 {
+        color: #000 !important;
     }
 
     .steps, .universes {
         break-inside: avoid;
     }
 
-    code {
-        border: 1px solid #000;
+    .instructions, .universes {
+        margin: 2em 0;
+    }
+
+    /* Force l'affichage des couleurs à l'impression */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
