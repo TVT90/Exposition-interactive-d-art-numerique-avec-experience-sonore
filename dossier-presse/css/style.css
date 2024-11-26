@@ -183,9 +183,14 @@ footer {
         break-inside: avoid;
     }
 
+    .kids-space {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
     .kids-image img {
-        max-width: 90% !important;
-        margin: 2rem auto;
+        max-width: 60% !important;
+        margin: 1rem auto;
         display: block;
     }
 }
