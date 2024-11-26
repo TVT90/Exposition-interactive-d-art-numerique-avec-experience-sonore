@@ -1,4 +1,3 @@
-/* Garder tout ton CSS de base initial jusqu'au @media print */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500&display=swap');
 
 /* Base styles */
@@ -105,6 +104,18 @@ section {
     padding: 2rem;
 }
 
+.kids-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.kids-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -130,7 +141,7 @@ footer {
     }
 }
 
-/* Print Styles - séparés et n'affectant que l'impression */
+/* Print Styles */
 @media print {
     body {
         padding: 20mm;
@@ -170,5 +181,11 @@ footer {
     .header, .artist-presentation, .artistic-approach, 
     .collections, .kids-space, .practical-info {
         break-inside: avoid;
+    }
+
+    .kids-image img {
+        max-width: 90% !important;
+        margin: 2rem auto;
+        display: block;
     }
 }
