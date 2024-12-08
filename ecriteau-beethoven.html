@@ -1,128 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Écriteau - La naissance du blues</title>
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
-   <style>
-       @page {
-           size: A4;
-           margin: 0;
-       }
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-       }
-       body {
-           width: 210mm;
-           height: 297mm;
-           margin: 0;
-           background: white;
-           font-family: 'Cormorant Garamond', serif;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-       .ecriteau {
-           width: 190mm;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           padding: 20mm 15mm;
-           height: 277mm;
-           justify-content: space-between;
-       }
-       .header {
-           text-align: center;
-           width: 100%;
-           margin: 0 auto 10mm auto;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
-       .collection-title {
-           font-family: 'Playfair Display', serif;
-           font-size: 16pt;
-           color: #666;
-           letter-spacing: 2px;
-           text-transform: uppercase;
-           margin-bottom: 8mm;
-           width: 100%;
-       }
-       .artwork-title {
-           font-family: 'Playfair Display', serif;
-           font-size: 28pt;
-           font-weight: 700;
-           color: #1A1A1A;
-           margin: 8mm 0;
-           width: 100%;
-       }
-       .separator {
-           width: 50mm;
-           height: 0;
-           border-top: 0.5mm solid #1A1A1A;
-           margin: 8mm auto;
-           display: block;
-       }
-       .poetic-text {
-           font-size: 14pt;
-           line-height: 1.6;
-           text-align: justify;
-           font-style: italic;
-           color: #333;
-           max-width: 140mm;
-           margin-bottom: 15mm;
-       }
-       .qr-container {
-           text-align: center;
-           margin-bottom: 10mm;
-       }
-       .qr-code {
-           width: 80mm;
-           height: 80mm;
-           margin-bottom: 5mm;
-       }
-       .music-info {
-           font-family: 'Playfair Display', serif;
-           font-size: 12pt;
-           font-style: italic;
-           color: #666;
-           line-height: 1.4;
-       }
-       .music-subtitle {
-           font-size: 10pt;
-           color: #888;
-           margin-top: 2mm;
-       }
-       .signature {
-           font-family: 'Playfair Display', serif;
-           font-size: 12pt;
-           color: #999;
-           letter-spacing: 2px;
-       }
-   </style>
+  <meta charset="UTF-8">
+  <title>Écriteau A6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+      @page {
+          size: A6;
+          margin: 0;
+      }
+      body {
+          width: 105mm;
+          height: 148mm;
+          margin: 0;
+          background: white;
+          font-family: 'Playfair Display', serif;
+      }
+      .ecriteau {
+          width: 95mm;
+          height: 138mm;
+          padding: 8mm 5mm;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .collection-title {
+          font-size: 10pt;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: #666;
+          margin-bottom: 6mm;
+      }
+      .artwork-title {
+          font-size: 16pt;
+          font-weight: 700;
+          color: #1A1A1A;
+          margin: 6mm 0;
+      }
+      .separator {
+          width: 35mm;
+          border-top: 0.2mm solid #1A1A1A;
+          margin: 6mm auto;
+      }
+      .qr-code {
+          width: 35mm;
+          height: 35mm;
+          margin: 6mm 0;
+          box-shadow: 0 2mm 4mm rgba(0,0,0,0.1);
+      }
+      .music-info {
+          font-size: 9pt;
+          font-style: italic;
+          color: #666;
+          margin-top: 4mm;
+      }
+      .music-info {
+   font-size: 9pt;
+   font-style: italic;
+   color: #666;
+   margin-top: 4mm;
+   text-align: center; /* Ajout pour garantir le centrage */
+   width: 100%; /* S'assure que le bloc prend toute la largeur */
+}
+
+.music-subtitle {
+   font-size: 7pt;
+   color: #888;
+   margin-top: 1mm;
+   letter-spacing: 0.5pt;
+   text-align: center; /* Ajout pour garantir le centrage */
+}
+  </style>
 </head>
 <body>
-   <div class="ecriteau">
-       <div class="header">
-           <div class="collection-title">La Collection Papier mâché</div>
-           <div class="artwork-title">Beethoven le tourmenté</div>
-           <div class="separator"></div>
-       </div>
-       
-       <div class="poetic-text">
-           Beethoven, le tourmenté, émerge des pages froissées de sa propre musique, chaque pli de papier portant le poids de ses mélodies inachevées et de ses batailles intérieures. Ses traits sculptés, déchirés par la passion et l'intensité, incarnent la tempête créatrice qui l'anime, tandis que les partitions flottent autour de lui comme des fragments d'âme. Dans cette mosaïque de papier, il est à la fois maître et esclave de son génie, un éternel combat entre silence et symphonie.
-       </div>
-       <div class="qr-container">
-           <img src="QRcode-beethoven-tourmente.png" alt="QR Code musical" class="qr-code">
-           <div class="music-info">
-               Symphonie n°5 en do mineur, Op. 67 - Premier mouvement
-               <div class="music-subtitle">Experience sonore interactive</div>
-           </div>
-       </div>
-       <div class="signature">Nova and I</div>
-   </div>
+  <div class="ecriteau">
+      <div class="collection-title">La Collection Papier mâché</div>
+      <div class="artwork-title">Beethoven le tourmenté</div>
+      <div class="separator"></div>
+      <img src="QRcode-beethoven-tourmente.png" alt="QR Code musical" class="qr-code">
+      <div class="music-info">
+          Follow the Little Creek
+          <div class="music-subtitle">Experience sonore interactive</div>
+      </div>
+      <div class="signature">Nova and I</div>
+  </div>
 </body>
 </html>
