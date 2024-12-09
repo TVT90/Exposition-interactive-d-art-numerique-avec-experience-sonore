@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Écriteau A6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+      @page {
+          size: A6;
+          margin: 0;
+      }
+      body {
+          width: 105mm;
+          height: 148mm;
+          margin: 0;
+          background: white;
+          font-family: 'Playfair Display', serif;
+      }
+      .ecriteau {
+          width: 95mm;
+          height: 138mm;
+          padding: 8mm 5mm;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .collection-title {
+          font-size: 10pt;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: #666;
+          margin-bottom: 6mm;
+      }
+      .artwork-title {
+          font-size: 16pt;
+          font-weight: 700;
+          color: #1A1A1A;
+          margin: 6mm 0;
+      }
+      .separator {
+          width: 35mm;
+          border-top: 0.2mm solid #1A1A1A;
+          margin: 6mm auto;
+      }
+      .qr-code {
+          width: 35mm;
+          height: 35mm;
+          margin: 6mm 0;
+          box-shadow: 0 2mm 4mm rgba(0,0,0,0.1);
+      }
+      .music-info {
+          font-size: 9pt;
+          font-style: italic;
+          color: #666;
+          margin-top: 4mm;
+      }
+      .music-info {
+   font-size: 9pt;
+   font-style: italic;
+   color: #666;
+   margin-top: 4mm;
+   text-align: center; /* Ajout pour garantir le centrage */
+   width: 100%; /* S'assure que le bloc prend toute la largeur */
+}
+
+.music-subtitle {
+   font-size: 7pt;
+   color: #888;
+   margin-top: 1mm;
+   letter-spacing: 0.5pt;
+   text-align: center; /* Ajout pour garantir le centrage */
+}
+  </style>
+</head>
+<body>
+  <div class="ecriteau">
+      <div class="collection-title">La Fashion Week des minéraux</div>
+      <div class="artwork-title">Citrine</div>
+      <div class="separator"></div>
+      <img src="citrine.png" alt="QR Code musical" class="qr-code">
+      <div class="music-info">
+          Beethoven Sonate No. 21, K. 304 - I.Allegro
+          <div class="music-subtitle">Experience sonore interactive</div>
+      </div>
+      <div class="signature">Nova and I</div>
+  </div>
+</body>
+</html>
